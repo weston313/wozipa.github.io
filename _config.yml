@@ -98,3 +98,9 @@ deploy:
   type: git 
   repo: https://github.com/wozipa/wozipa.github.io.git
   branch: master
+
+# hexo-admin authentification
+admin:
+  username: wozipa
+  password_hash: $2a$10$O.PT/nquSQGg7fZ/7SccU.aDSSTmoU98y/ecR3j.OQGEe6g0FpBxi
+  secret: wozipa
