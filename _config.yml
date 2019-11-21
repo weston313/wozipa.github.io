@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Wozipa
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: ZhiPeng Wang
+language: zh-Hans 
 timezone: ''
 
 # URL
@@ -91,6 +91,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next 
+plugins: hexo-generate-feed
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
