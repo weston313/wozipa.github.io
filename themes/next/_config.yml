@@ -126,7 +126,7 @@ scheme: Gemini
 menu:
   home: / || home
   # about: /about/ || user
-  # tags: /tags/ || tags
+  tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -171,7 +171,7 @@ avatar:
   # Replace the default image and set the url here.
   url: /images/header.jpg
   # If true, the avatar would be dispalyed in circle.
-  rounded: false
+  rounded: false 
   # If true, the avatar would be rotated with the cursor.
   rotated: false
 
@@ -183,8 +183,9 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/wozipa || github
+  知乎: https://www.zhihu.com/people/wozipa/activities || instagram 
+  #E-Mail: wozipa@gmail.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -197,7 +198,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: false 
   transition: false
 
 # Blog rolls
@@ -261,6 +262,13 @@ post_meta:
   categories: true
 
 # Post wordcount display settings
+post_wordcount:
+    item_text: true
+    wordcount: true
+    min2read: true 
+    totalcount: true 
+    separated_meta: true
+
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   separated_meta: true
@@ -760,7 +768,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -770,6 +778,12 @@ local_search:
   unescape: false
   # Preload the search data when the page loads.
   preload: false
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Swiftype Search API Key
 swiftype_key:
