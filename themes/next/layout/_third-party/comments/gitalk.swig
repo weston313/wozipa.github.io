@@ -1,6 +1,5 @@
 {% if page.comments and theme.gitalk.enable %}
 	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<div id="gitalk-container"></div>
 	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 	<script type="text/javascript">
@@ -14,6 +13,14 @@
 			distractionFreeMode: '{{ theme.gitalk.distractionFreeMode }}',
 			
 		    })
-	    gitalk.render('gitalk-container')
+	    var div = document.createElement('div');
+      	    div.setAttribute("id", "gitalk-container");
+	    var bro = document.getElementsByClassName('main-inner');
+	    bro = bro[0];
+	    bro = bro.getElementsByTagName('article');
+      	    bro = bro[0].getElementsByTagName('footer');
+      	    bro = bro[0];
+      	    bro.appendChild(div);
+	    gitalk.render('gitalk-container');
 	</script>
 {% endif %}

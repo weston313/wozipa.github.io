@@ -82,5 +82,3 @@
  	<div id="gitalk-container"></div>
   {% endif %}
 {% endif %}
-
-
