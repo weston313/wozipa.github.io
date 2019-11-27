@@ -105,3 +105,9 @@ admin:
   username: wozipa
   password_hash: $2a$10$O.PT/nquSQGg7fZ/7SccU.aDSSTmoU98y/ecR3j.OQGEe6g0FpBxi
   secret: wozipa
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
