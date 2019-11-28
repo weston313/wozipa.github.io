@@ -51,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="介绍SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。 语法介绍SparkSQL的语法定义是通Antlr4实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可">
+  <meta name="description" content="介绍SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。语法介绍SparkSQL的语法定义是通Antlr4实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可以">
 <meta name="keywords" content="SparkSQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark Hint">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;SparkHint&#x2F;index.html">
 <meta property="og:site_name" content="Wozipa">
-<meta property="og:description" content="介绍SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。 语法介绍SparkSQL的语法定义是通Antlr4实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可">
+<meta property="og:description" content="介绍SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。语法介绍SparkSQL的语法定义是通Antlr4实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-11-28T07:28:13.159Z">
 <meta name="twitter:card" content="summary">
@@ -286,8 +286,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。</p>
-<h2 id="语法介绍"><a href="#语法介绍" class="headerlink" title="语法介绍"></a>语法介绍</h2><p>SparkSQL的语法定义是通<a href="https://github.com/antlr/antlr4" target="_blank" rel="noopener">Antlr4</a>实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可以尝试去理解一下下面这段代码。</p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。</p><h2 id="语法介绍"><a href="#语法介绍" class="headerlink" title="语法介绍"></a>语法介绍</h2><p>SparkSQL的语法定义是通<a href="https://github.com/antlr/antlr4" target="_blank" rel="noopener">Antlr4</a>实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可以尝试去理解一下下面这段代码。</p><a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># 来自于Spark源代码的SqlBase.g4文件</span><br><span class="line"># 内容有部分删除，如查看源代码是请注意</span><br><span class="line"></span><br><span class="line"># 定义特别查询的语法树节点</span><br><span class="line">querySpecification</span><br><span class="line">    : ((kind=SELECT (hints+=hint)* setQuantifier? namedExpressionSeq fromClause?</span><br><span class="line">       | fromClause (kind=SELECT setQuantifier? namedExpressionSeq)?)</span><br><span class="line">       lateralView*</span><br><span class="line">       (WHERE where=booleanExpression)?</span><br><span class="line">       aggregation?</span><br><span class="line">       (HAVING having=booleanExpression)?</span><br><span class="line">       windows?)</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line"># Hint基本的格式，开始符号、结束符号，语句列表格式，格式为</span><br><span class="line"># /*+ 多条语句 */</span><br><span class="line">hint</span><br><span class="line">    : &apos;/*+&apos; hintStatements+=hintStatement (&apos;,&apos;? hintStatements+=hintStatement)* &apos;*/&apos;</span><br><span class="line">    ;</span><br><span class="line"># 单个Hint的组成</span><br><span class="line"># 名称</span><br><span class="line"># 名称(参数, 参数2...)</span><br><span class="line">hintStatement</span><br><span class="line">    : hintName=identifier</span><br><span class="line">    | hintName=identifier &apos;(&apos; parameters+=primaryExpression (&apos;,&apos; parameters+=primaryExpression)* &apos;)&apos;</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
 
 <p>上述Hint的语法树中定义了Hint的使用方式为：</p>
