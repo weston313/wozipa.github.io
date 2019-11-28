@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Wozipa" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Wozipa">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:site_name" content="Wozipa">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Wozipa</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/wozipa" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wozipa</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/28/Next%E6%B7%BB%E5%8A%A0Gitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="ZhiPeng Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wozipa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/Next%E6%B7%BB%E5%8A%A0Gitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">Next添加Gitalk评论系统</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-28 12:52:56 / 修改时间：14:29:15" itemprop="dateCreated datePublished" datetime="2019-11-28T12:52:56+08:00">2019-11-28</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>最近在搭建Hexo + Next 的博客系统，在添加评论系统时选用了gitalk系统作为首选的评论系统，但是在添加过程中遇到了很多问题，在经过了好几次测试，终于将gitalk 与 Next 7.5.0 结合在一起。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="创建存储仓库"><a href="#创建存储仓库" class="headerlink" title="创建存储仓库"></a>创建存储仓库</h3><p>首先需要在github上创建一个新的public的仓库，名称为<a href="https://github.com/wozipa/blog-comment" target="_blank" rel="noopener">blog-comment</a></p>
+<h3 id="创建Application"><a href="#创建Application" class="headerlink" title="创建Application"></a>创建Application</h3><p>创建地址为：<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">https://github.com/settings/applications/new</a><br><img src="/images/pasted-0.png" alt="upload successful"></p>
+<p>注意：Callback URL 填写的是博客的连接</p>
+<p><img src="/images/pasted-1.png" alt="upload successful"><br>创建完成后可以在Settings/ Developer settings中查看创建好的ClientID和 Client Secret</p>
+<h3 id="修改gitalk文件"><a href="#修改gitalk文件" class="headerlink" title="修改gitalk文件"></a>修改gitalk文件</h3><p>gitalk.swig文件夹在 <code>themes/next/layout/_third-party/comments</code> 路径中，打开gitalk.swig后，将原有内容全部删除，并添加一下的代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> page.comments and theme.gitalk.enable %&#125;</span><br><span class="line">	&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span><br><span class="line">	&lt;script src=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">	&lt;script src=<span class="string">"https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">    <span class="comment">// gitalk添加所需要的配置信息</span></span><br><span class="line">	&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    		<span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">		        clientID: <span class="string">'&#123;&#123; theme.gitalk.client_id &#125;&#125;'</span>,</span><br><span class="line">		        clientSecret: <span class="string">'&#123;&#123; theme.gitalk.client_secret &#125;&#125;'</span>,</span><br><span class="line">		        id: md5(location.pathname),</span><br><span class="line">		        repo: <span class="string">'&#123;&#123; theme.gitalk.repo &#125;&#125;'</span>,</span><br><span class="line">		        owner: <span class="string">'&#123;&#123; theme.gitalk.owner &#125;&#125;'</span>,</span><br><span class="line">		        admin: <span class="string">'&#123;&#123; theme.gitalk.admin_user &#125;&#125;'</span>,</span><br><span class="line">			distractionFreeMode: <span class="string">'&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;'</span>,</span><br><span class="line"></span><br><span class="line">		    &#125;)</span><br><span class="line">        <span class="comment">// 创建DIV，并设置ID</span></span><br><span class="line">	    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">      	div.setAttribute(<span class="string">"id"</span>, <span class="string">"gitalk-container"</span>);</span><br><span class="line">        <span class="comment">// 将DIV添加到文件内容的footer中</span></span><br><span class="line">	    <span class="keyword">var</span> bro = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'main-inner'</span>);</span><br><span class="line">	    bro = bro[<span class="number">0</span>];</span><br><span class="line">	    bro = bro.getElementsByTagName(<span class="string">'article'</span>);</span><br><span class="line">      	bro = bro[<span class="number">0</span>].getElementsByTagName(<span class="string">'footer'</span>);</span><br><span class="line">      	bro = bro[<span class="number">0</span>];</span><br><span class="line">      	bro.appendChild(div);</span><br><span class="line">	    gitalk.render(<span class="string">'gitalk-container'</span>);</span><br><span class="line">	&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>当时从网上找到的博客基本都是直接在尾部添加DIV后进行渲染，但是在Next 7.5生成的效果就是评论系统出现在网站的最底部，并且宽度达到整个页面的100%。后来明白了字段代码主要是将一个<code>&lt;div&gt;&lt;/div&gt;</code>标签添加到artile标签的中的footer表中，然后直接F12打开整个页面的布局：</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/spark-hint/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="ZhiPeng Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wozipa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/spark-hint/" class="post-title-link" itemprop="url">Spark Hint</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-26 15:24:51" itemprop="dateCreated datePublished" datetime="2019-11-26T15:24:51+08:00">2019-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-28 10:47:35" itemprop="dateModified" datetime="2019-11-28T10:47:35+08:00">2019-11-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/spark/" itemprop="url" rel="index">
+                    <span itemprop="name">spark</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。</p>
+<h2 id="语法介绍"><a href="#语法介绍" class="headerlink" title="语法介绍"></a>语法介绍</h2><p>SparkSQL的语法定义是通<a href="https://github.com/antlr/antlr4" target="_blank" rel="noopener">Antlr4</a>实现的，Antlr4是一个提供语法定义、语法解析等第三方库，Antlr4语法的定义基本复合正则表达式，因此会正则表达式的同学可以尝试去理解一下下面这段代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># 来自于Spark源代码的SqlBase.g4文件</span><br><span class="line"># 内容有部分删除，如查看源代码是请注意</span><br><span class="line"></span><br><span class="line"># 定义特别查询的语法树节点</span><br><span class="line">querySpecification</span><br><span class="line">    : ((kind=SELECT (hints+=hint)* setQuantifier? namedExpressionSeq fromClause?</span><br><span class="line">       | fromClause (kind=SELECT setQuantifier? namedExpressionSeq)?)</span><br><span class="line">       lateralView*</span><br><span class="line">       (WHERE where=booleanExpression)?</span><br><span class="line">       aggregation?</span><br><span class="line">       (HAVING having=booleanExpression)?</span><br><span class="line">       windows?)</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line"># Hint基本的格式，开始符号、结束符号，语句列表格式，格式为</span><br><span class="line"># /*+ 多条语句 */</span><br><span class="line">hint</span><br><span class="line">    : &apos;/*+&apos; hintStatements+=hintStatement (&apos;,&apos;? hintStatements+=hintStatement)* &apos;*/&apos;</span><br><span class="line">    ;</span><br><span class="line"># 单个Hint的组成</span><br><span class="line"># 名称</span><br><span class="line"># 名称(参数, 参数2...)</span><br><span class="line">hintStatement</span><br><span class="line">    : hintName=identifier</span><br><span class="line">    | hintName=identifier &apos;(&apos; parameters+=primaryExpression (&apos;,&apos; parameters+=primaryExpression)* &apos;)&apos;</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<p>上述Hint的语法树中定义了Hint的使用方式为：</p>
+<ul>
+<li>SparkHint只能在Select语句中使用</li>
+<li>SparkHint的结果必须要SELECT关键字以后标识，且结构体为<br>/*+ … */</li>
+</ul>
+<p>目前SparkHint支持的语法很少，只有两种语法:</p>
+<ul>
+<li>Broadcast: MAPJOIN/BROADCASTJOIN/BROADCAST</li>
+<li>Coalesce: REPARTITION/COALESCE</li>
+</ul>
+<p>下面的例子简单介绍一下SparkHint是如何使用的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select /*+ BRAODCASTJOIN(B) */</span><br><span class="line">   	A.COL1</span><br><span class="line">       , B.COL2</span><br><span class="line">   FROM </span><br><span class="line">   	A LEFT JOIN B USING(COL3);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="源代码解析"><a href="#源代码解析" class="headerlink" title="源代码解析"></a>源代码解析</h2><p>SparkSQL的解析过程大致上可以分为一下几个过程:</p>
+<ul>
+<li>G4文件定义语法</li>
+<li>AstBuilder/SparkAstBuilder将语法树种的信息解析成相应的逻辑计划</li>
+<li>Analyzer层将一些LogicalPlan翻译成另一个LogicalPlan语法</li>
+<li>Optimizer层在Schema等级别进行优化，生成LogicalPlan</li>
+<li>SparkPlan将LogicPlan翻译成影响的SparkPlan</li>
+<li>执行SparkPlan映射成底层的RDD操作</li>
+</ul>
+<p>这里简单介绍一下SparkSQL的解析过程，后续我们再写一篇文章详细介绍SparkSQL解析的整体过程。</p>
+<h3 id="G4文件"><a href="#G4文件" class="headerlink" title="G4文件"></a>G4文件</h3><p>当我们使用 sparkSession.sql(string) 执行SparkHint语句时，首先要经历语法解析，在这里会将SparkHint的语法解析成相应的hintStatement语法，并且将HintStatement中的参数进行提取。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Hint基本的格式，开始符号、结束符号，语句列表格式</span><br><span class="line">hint</span><br><span class="line">    : &apos;/*+&apos; hintStatements+=hintStatement (&apos;,&apos;? hintStatements+=hintStatement)* &apos;*/&apos;</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line"># 单个Hint的组成</span><br><span class="line"># 名称</span><br><span class="line"># 名称(参数, 参数2...)</span><br><span class="line">hintStatement</span><br><span class="line">    : hintName=identifier</span><br><span class="line">    | hintName=identifier &apos;(&apos; parameters+=primaryExpression (&apos;,&apos; parameters+=primaryExpression)* &apos;)&apos;</span><br></pre></td></tr></table></figure>
+
+<h3 id="AstBuilder解析"><a href="#AstBuilder解析" class="headerlink" title="AstBuilder解析"></a>AstBuilder解析</h3><p>SparkSQL采用的是Antlr4的Visitor模式，继承Visitor接口实现相应的代码(AstBuilder.java和 SparkAstBuilder.java)，这两个类的主要作用是将一条SQL语句的每一部分翻译成相应的逻辑计划(LogicalPlan)代码。然后SparkSQL的三层将生成的LogicalPlan进行相应的解析、优化和转化成底层的RDD操作。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Add [[UnresolvedHint]]s to a logical plan.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">def</span> <span class="title">withHints</span></span>(</span><br><span class="line">    ctx: <span class="type">HintContext</span>,</span><br><span class="line">    query: <span class="type">LogicalPlan</span>): <span class="type">LogicalPlan</span> = withOrigin(ctx) &#123;</span><br><span class="line">  <span class="keyword">var</span> plan = query</span><br><span class="line">  <span class="comment">// 将hintStatement列表转换成UnresolvedHint对象</span></span><br><span class="line">  ctx.hintStatements.asScala.reverse.foreach &#123; <span class="keyword">case</span> stmt =&gt;</span><br><span class="line">    plan = <span class="type">UnresolvedHint</span>(stmt.hintName.getText, stmt.parameters.asScala.map(expression), plan)</span><br><span class="line">  &#125;</span><br><span class="line">  plan</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码结合G4文件的语法就能得到一下几点:</p>
+<ul>
+<li>一个hintStatemenet转换成一个UnresolvedHint</li>
+<li>生成UnresolvedHint对象时，将定义的hintName以及params进行了存储</li>
+</ul>
+<h3 id="Analyzer"><a href="#Analyzer" class="headerlink" title="Analyzer"></a>Analyzer</h3><p>Analyzer对象可以理解成是一系列解析过程的集合，每一个解析过程会针对一种LogicalPlan进行解析，并生成后续可以被优化以及翻译的过程LogicalPlan。</p>
+<p>Analyzer的解析过程列表，Hint的解析过程排列在第一个：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"># <span class="type">Spark</span> <span class="number">2.4</span> 版本代码</span><br><span class="line"><span class="keyword">lazy</span> <span class="keyword">val</span> batches: <span class="type">Seq</span>[<span class="type">Batch</span>] = <span class="type">Seq</span>(</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Hints"</span>, fixedPoint,</span><br><span class="line">      <span class="keyword">new</span> <span class="type">ResolveHints</span>.<span class="type">ResolveBroadcastHints</span>(conf),</span><br><span class="line">      <span class="type">ResolveHints</span>.<span class="type">ResolveCoalesceHints</span>,</span><br><span class="line">      <span class="type">ResolveHints</span>.<span class="type">RemoveAllHints</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Simple Sanity Check"</span>, <span class="type">Once</span>,</span><br><span class="line">      <span class="type">LookupFunctions</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Substitution"</span>, fixedPoint,</span><br><span class="line">      <span class="type">CTESubstitution</span>,</span><br><span class="line">      <span class="type">WindowsSubstitution</span>,</span><br><span class="line">      <span class="type">EliminateUnions</span>,</span><br><span class="line">      <span class="keyword">new</span> <span class="type">SubstituteUnresolvedOrdinals</span>(conf)),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Resolution"</span>, fixedPoint,</span><br><span class="line">      <span class="type">ResolveTableValuedFunctions</span> ::</span><br><span class="line">      <span class="type">ResolveRelations</span> ::</span><br><span class="line">      <span class="type">ResolveReferences</span> ::</span><br><span class="line">      <span class="type">ResolveCreateNamedStruct</span> ::</span><br><span class="line">      <span class="type">ResolveDeserializer</span> ::</span><br><span class="line">      <span class="type">ResolveNewInstance</span> ::</span><br><span class="line">      <span class="type">ResolveUpCast</span> ::</span><br><span class="line">      <span class="type">ResolveGroupingAnalytics</span> ::</span><br><span class="line">      <span class="type">ResolvePivot</span> ::</span><br><span class="line">      <span class="type">ResolveOrdinalInOrderByAndGroupBy</span> ::</span><br><span class="line">      <span class="type">ResolveAggAliasInGroupBy</span> ::</span><br><span class="line">      <span class="type">ResolveMissingReferences</span> ::</span><br><span class="line">      <span class="type">ExtractGenerator</span> ::</span><br><span class="line">      <span class="type">ResolveGenerate</span> ::</span><br><span class="line">      <span class="type">ResolveFunctions</span> ::</span><br><span class="line">      <span class="type">ResolveAliases</span> ::</span><br><span class="line">      <span class="type">ResolveSubquery</span> ::</span><br><span class="line">      <span class="type">ResolveSubqueryColumnAliases</span> ::</span><br><span class="line">      <span class="type">ResolveWindowOrder</span> ::</span><br><span class="line">      <span class="type">ResolveWindowFrame</span> ::</span><br><span class="line">      <span class="type">ResolveNaturalAndUsingJoin</span> ::</span><br><span class="line">      <span class="type">ResolveOutputRelation</span> ::</span><br><span class="line">      <span class="type">ExtractWindowExpressions</span> ::</span><br><span class="line">      <span class="type">GlobalAggregates</span> ::</span><br><span class="line">      <span class="type">ResolveAggregateFunctions</span> ::</span><br><span class="line">      <span class="type">TimeWindowing</span> ::</span><br><span class="line">      <span class="type">ResolveInlineTables</span>(conf) ::</span><br><span class="line">      <span class="type">ResolveHigherOrderFunctions</span>(catalog) ::</span><br><span class="line">      <span class="type">ResolveLambdaVariables</span>(conf) ::</span><br><span class="line">      <span class="type">ResolveTimeZone</span>(conf) ::</span><br><span class="line">      <span class="type">ResolveRandomSeed</span> ::</span><br><span class="line">      <span class="type">TypeCoercion</span>.typeCoercionRules(conf) ++</span><br><span class="line">      extendedResolutionRules : _*),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Post-Hoc Resolution"</span>, <span class="type">Once</span>, postHocResolutionRules: _*),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Nondeterministic"</span>, <span class="type">Once</span>,</span><br><span class="line">      <span class="type">PullOutNondeterministic</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"UDF"</span>, <span class="type">Once</span>,</span><br><span class="line">      <span class="type">HandleNullInputsForUDF</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"FixNullability"</span>, <span class="type">Once</span>,</span><br><span class="line">      <span class="type">FixNullability</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Subquery"</span>, <span class="type">Once</span>,</span><br><span class="line">      <span class="type">UpdateOuterReferences</span>),</span><br><span class="line">    <span class="type">Batch</span>(<span class="string">"Cleanup"</span>, fixedPoint,</span><br><span class="line">      <span class="type">CleanupAliases</span>)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到Hint的Batch里头有三个对象，一个是ResolveBroadcastHints，一个是ResolveCoalesceHints，最后一个是RemoveAllHints，我们来看一下源代码：</p>
+<ul>
+<li>ResolveCoalesceHints<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">   * COALESCE Hint accepts name &quot;COALESCE&quot; and &quot;REPARTITION&quot;.</span><br><span class="line">   * Its parameter includes a partition number.</span><br><span class="line">   */</span><br><span class="line">  object ResolveCoalesceHints extends Rule[LogicalPlan] &#123;</span><br><span class="line">    private val COALESCE_HINT_NAMES = Set(&quot;COALESCE&quot;, &quot;REPARTITION&quot;)</span><br><span class="line">    </span><br><span class="line">    def apply(plan: LogicalPlan): LogicalPlan = plan.resolveOperators &#123;</span><br><span class="line">      // 判断为UnresolvedHint对象并且hintName为REPARTITION/COALESCE</span><br><span class="line">      case h: UnresolvedHint if COALESCE_HINT_NAMES.contains(h.name.toUpperCase(Locale.ROOT)) =&gt;</span><br><span class="line">        // 获取的HintName</span><br><span class="line">        val hintName = h.name.toUpperCase(Locale.ROOT)</span><br><span class="line">        // 是否shuffle</span><br><span class="line">        val shuffle = hintName match &#123;</span><br><span class="line">          case &quot;REPARTITION&quot; =&gt; true</span><br><span class="line">          case &quot;COALESCE&quot; =&gt; false</span><br><span class="line">        &#125;</span><br><span class="line">        // 分区数量</span><br><span class="line">        val numPartitions = h.parameters match &#123;</span><br><span class="line">          case Seq(IntegerLiteral(numPartitions)) =&gt;</span><br><span class="line">            numPartitions</span><br><span class="line">          case Seq(numPartitions: Int) =&gt;</span><br><span class="line">            numPartitions</span><br><span class="line">          case _ =&gt;</span><br><span class="line">            throw new AnalysisException(s&quot;$hintName Hint expects a partition number as parameter&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 生成Repartition LogicalPlan对象</span><br><span class="line">        Repartition(numPartitions, shuffle, h.child)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Removes all the hints, used to remove invalid hints provided by the user.</span></span><br><span class="line"><span class="comment">   * This must be executed after all the other hint rules are executed.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="class"><span class="keyword">object</span> <span class="title">RemoveAllHints</span> <span class="keyword">extends</span> <span class="title">Rule</span>[<span class="type">LogicalPlan</span>] </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apply</span></span>(plan: <span class="type">LogicalPlan</span>): <span class="type">LogicalPlan</span> = plan resolveOperatorsUp 	&#123;</span><br><span class="line">      <span class="comment">// 直接将Dataset链进行返回，不生成任何LogicalPlan，因此为空操作</span></span><br><span class="line">      <span class="keyword">case</span> h: <span class="type">UnresolvedHint</span> =&gt; h.child</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * For broadcast hint, we accept "BROADCAST", "BROADCASTJOIN", and "MAPJOIN", and a sequence of</span></span><br><span class="line"><span class="comment">   * relation aliases can be specified in the hint. A broadcast hint plan node will be inserted</span></span><br><span class="line"><span class="comment">   * on top of any relation (that is not aliased differently), subquery, or common table expression</span></span><br><span class="line"><span class="comment">   * that match the specified name.</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * The hint resolution works by recursively traversing down the query plan to find a relation or</span></span><br><span class="line"><span class="comment">   * subquery that matches one of the specified broadcast aliases. The traversal does not go past</span></span><br><span class="line"><span class="comment">   * beyond any existing broadcast hints, subquery aliases.</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * This rule must happen before common table expressions.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">ResolveBroadcastHints</span>(<span class="params">conf: <span class="type">SQLConf</span></span>) <span class="keyword">extends</span> <span class="title">Rule</span>[<span class="type">LogicalPlan</span>] </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> <span class="type">BROADCAST_HINT_NAMES</span> = <span class="type">Set</span>(<span class="string">"BROADCAST"</span>, <span class="string">"BROADCASTJOIN"</span>, <span class="string">"MAPJOIN"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">resolver</span></span>: <span class="type">Resolver</span> = conf.resolver</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">def</span> <span class="title">applyBroadcastHint</span></span>(plan: <span class="type">LogicalPlan</span>, toBroadcast: <span class="type">Set</span>[<span class="type">String</span>]): <span class="type">LogicalPlan</span> = &#123;</span><br><span class="line">      <span class="comment">// Whether to continue recursing down the tree</span></span><br><span class="line">      <span class="keyword">var</span> recurse = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">val</span> newNode = <span class="type">CurrentOrigin</span>.withOrigin(plan.origin) &#123;</span><br><span class="line">        plan <span class="keyword">match</span> &#123;</span><br><span class="line">          <span class="comment">// 将子Dataset进行BroadCast操作</span></span><br><span class="line">          <span class="keyword">case</span> u: <span class="type">UnresolvedRelation</span> <span class="keyword">if</span> toBroadcast.exists(resolver(_, u.tableIdentifier.table)) =&gt;</span><br><span class="line">            <span class="type">ResolvedHint</span>(plan, <span class="type">HintInfo</span>(broadcast = <span class="literal">true</span>))</span><br><span class="line">          <span class="keyword">case</span> r: <span class="type">SubqueryAlias</span> <span class="keyword">if</span> toBroadcast.exists(resolver(_, r.alias)) =&gt;</span><br><span class="line">            <span class="type">ResolvedHint</span>(plan, <span class="type">HintInfo</span>(broadcast = <span class="literal">true</span>))</span><br><span class="line"></span><br><span class="line">          <span class="keyword">case</span> _: <span class="type">ResolvedHint</span> | _: <span class="type">View</span> | _: <span class="type">With</span> | _: <span class="type">SubqueryAlias</span> =&gt;</span><br><span class="line">            <span class="comment">// Don't traverse down these nodes.</span></span><br><span class="line">            <span class="comment">// For an existing broadcast hint, there is no point going down (if we do, we either</span></span><br><span class="line">            <span class="comment">// won't change the structure, or will introduce another broadcast hint that is useless.</span></span><br><span class="line">            <span class="comment">// The rest (view, with, subquery) indicates different scopes that we shouldn't traverse</span></span><br><span class="line">            <span class="comment">// down. Note that technically when this rule is executed, we haven't completed view</span></span><br><span class="line">            <span class="comment">// resolution yet and as a result the view part should be deadcode. I'm leaving it here</span></span><br><span class="line">            <span class="comment">// to be more future proof in case we change the view we do view resolution.</span></span><br><span class="line">            recurse = <span class="literal">false</span></span><br><span class="line">            plan</span><br><span class="line"></span><br><span class="line">          <span class="keyword">case</span> _ =&gt;</span><br><span class="line">            plan</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> ((plan fastEquals newNode) &amp;&amp; recurse) &#123;</span><br><span class="line">        newNode.mapChildren(child =&gt; applyBroadcastHint(child, toBroadcast))</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        newNode</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apply</span></span>(plan: <span class="type">LogicalPlan</span>): <span class="type">LogicalPlan</span> = plan resolveOperatorsUp &#123;</span><br><span class="line">      <span class="comment">// 判断是否为BroadCastJoin操作</span></span><br><span class="line">      <span class="keyword">case</span> h: <span class="type">UnresolvedHint</span> <span class="keyword">if</span> <span class="type">BROADCAST_HINT_NAMES</span>.contains(h.name.toUpperCase(<span class="type">Locale</span>.<span class="type">ROOT</span>)) =&gt;</span><br><span class="line">        <span class="comment">// 如果参数为空，则将子Dataset进行broadcast</span></span><br><span class="line">        <span class="keyword">if</span> (h.parameters.isEmpty) &#123;</span><br><span class="line">          <span class="comment">// If there is no table alias specified, turn the entire subtree into a BroadcastHint.</span></span><br><span class="line">          <span class="type">ResolvedHint</span>(h.child, <span class="type">HintInfo</span>(broadcast = <span class="literal">true</span>))</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">// Otherwise, find within the subtree query plans that should be broadcasted.</span></span><br><span class="line">          <span class="comment">// 如果参数不为空时，则对表名的Dataset进行BroadCastJoin操作</span></span><br><span class="line">          applyBroadcastHint(h.child, h.parameters.map &#123;</span><br><span class="line">            <span class="keyword">case</span> tableName: <span class="type">String</span> =&gt; tableName</span><br><span class="line">            <span class="keyword">case</span> tableId: <span class="type">UnresolvedAttribute</span> =&gt; tableId.name</span><br><span class="line">            <span class="keyword">case</span> unsupported =&gt; <span class="keyword">throw</span> <span class="keyword">new</span> <span class="type">AnalysisException</span>(<span class="string">"Broadcast hint parameter should be "</span> +</span><br><span class="line">              <span class="string">s"an identifier or string but was <span class="subst">$unsupported</span> (<span class="subst">$&#123;unsupported.getClass&#125;</span>"</span>)</span><br><span class="line">          &#125;.toSet)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>所以到这里SparkHint框架基本就结束了，因为SparkHint操作生成的是Unresolved级别的LogicalPlan对象，因此会在Analyzer层被相应的Batch捕捉并处理成别的LogicalPlan对象。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>SparkHint目前仅提供了BroadCastJoin和REPARTITION两种操作，其他的Hint语法都会被删除忽而略；我们可以在SQL中使用者两种语法来达到优化的目的。如果有什么写的不对的地方，请大家指点出来~</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ZhiPeng Wang"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">ZhiPeng Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wozipa" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wozipa" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/wozipa/activities" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wozipa&#x2F;activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>知乎</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZhiPeng Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">10k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	<script type="text/javascript">
+    		var gitalk = new Gitalk({
+		        clientID: '24f89d146fd10062e849', 
+		        clientSecret: 'af23fa493cb25978c813b1c3eb492339e864dabd',
+		        id: md5(location.pathname),
+		        repo: 'blog-comment',
+		        owner: 'wozipa',
+		        admin: 'wozipa',
+			distractionFreeMode: '',
+			
+		    })
+	    // var div = document.createElement('div');
+      	    // div.setAttribute("id", "gitalk-container");
+	    // var bro = document.getElementsByClassName('main-inner');
+	    // bro = bro[0];
+	    // bro = bro.getElementsByTagName('article');
+      	    // bro = bro[0].getElementsByTagName('footer');
+      	    // bro = bro[0];
+      	    // bro.appendChild(div);
+	    gitalk.render('gitalk-container');
+	</script>
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>
