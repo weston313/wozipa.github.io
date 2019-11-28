@@ -13,14 +13,14 @@
 			distractionFreeMode: '{{ theme.gitalk.distractionFreeMode }}',
 			
 		    })
-	    var div = document.createElement('div');
-      	    div.setAttribute("id", "gitalk-container");
-	    var bro = document.getElementsByClassName('main-inner');
-	    bro = bro[0];
-	    bro = bro.getElementsByTagName('article');
-      	    bro = bro[0].getElementsByTagName('footer');
-      	    bro = bro[0];
-      	    bro.appendChild(div);
+	    // var div = document.createElement('div');
+      	    // div.setAttribute("id", "gitalk-container");
+	    // var bro = document.getElementsByClassName('main-inner');
+	    // bro = bro[0];
+	    // bro = bro.getElementsByTagName('article');
+      	    // bro = bro[0].getElementsByTagName('footer');
+      	    // bro = bro[0];
+      	    // bro.appendChild(div);
 	    gitalk.render('gitalk-container');
 	</script>
 {% endif %}

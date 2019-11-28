@@ -1,7 +1,7 @@
 title: Spark Hint
 date: 2019-11-26 15:24:51
-categories: spark
-tags: SparkHint,源代码
+categories: Spark
+tags: [SparkSQL]
 ---
 ## 介绍
 SparkHint是在使用SparkSQL开发过程中，针对SQL进行优化的一点小技巧，我们可以通过Hint的方式实现BraodcastJoin优化、Reparttion分区等操作，提供了传统SQL中无法实现的一些功能。
